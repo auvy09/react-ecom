@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cart.css';
+import { Link } from 'react-router-dom';
 const Cart = ({ cart }) => {
     let total = 0;
     let shipping = 0;
@@ -20,6 +21,7 @@ const Cart = ({ cart }) => {
             <p>Shipping Cost: ${shipping}</p>
             <p>Tax: ${tax}</p>
             <h5>Total Amount: ${(totalAmount).toFixed(2)}</h5>
+            <button className='btn-shipping'> <Link to='/shipping'>Proceed Shipping</Link></button>
         </div>
     );
 };
